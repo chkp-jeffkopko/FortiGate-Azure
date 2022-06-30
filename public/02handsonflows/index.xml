@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Traffic Flow Demonstrations on Check Point CloudGuard Network Security Workshop - AWS GWLB</title>
+    <link>/02handsonflows.html</link>
+    <description>Recent content in Traffic Flow Demonstrations on Check Point CloudGuard Network Security Workshop - AWS GWLB</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="/02handsonflows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Centralized E/W across Spokes</title>
+      <link>/02handsonflows/2_centew.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/02handsonflows/2_centew.html</guid>
+      <description>Centralized E/W across Spokes Flow Description &amp;amp; Diagram # Hop description 1 DB host to SS host, 0/ &amp;ndash;&amp;gt; TGW 2 TGW Attachment RT 0/ &amp;ndash;&amp;gt; Sec VPC 3 Sec VPC TGW Attach RT 0/ &amp;ndash;&amp;gt; GWLBe 4 GWLBe magic: GWLB (GENEVE) &amp;ndash;&amp;gt; CGNS and return back to GWLBe 5 GWLBe RT Spoke &amp;ndash;&amp;gt; TGW 6 TGW Propagated RT &amp;ndash;&amp;gt; SS Spoke/Host Testing Procedure Ssh to any of the EC2 hosts in Database or Shared Services VPC Ping another of the EC2 hosts with its private IP Search for the internal IP’s of the EC2 Host you’re sending the ping from and to </description>
+    </item>
+    
+    <item>
+      <title>Centralized Egress</title>
+      <link>/02handsonflows/3_centegress.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/02handsonflows/3_centegress.html</guid>
+      <description>Centralized Egress Flow Description &amp;amp; Diagram # Hop description 1 DB host to SS host, 0&amp;ndash;&amp;gt; TGW 2 TGW Attachment RT 0/ &amp;ndash;&amp;gt; Sec VPC 3 Sec VPC TGW Attach RT 0/ &amp;ndash;&amp;gt; GWLBe 4 GWLBe magic: GWLB (GENEVE) &amp;ndash;&amp;gt; CGNS and return back to GWLBe 5 GWLBe RT Spoke&amp;ndash;&amp;gt; TGW 6 TGW Propagated RT &amp;ndash;&amp;gt; SS Spoke/Host 1 SS Host to Internet 0/&amp;ndash;&amp;gt; TGW 2 TGW Attachment RT 0/ &amp;ndash;&amp;gt; Sec VPC 3 Sec VPC TGW Attach RT 0/ &amp;ndash;&amp;gt; GWLBe 4 GWLBe magic: GWLB (GENEVE) &amp;ndash;&amp;gt; CGNS and return back to GWLBe 5 GWLBe RT 0/ &amp;ndash;&amp;gt; NATGW 6 NATGW (egress NAT) 0/ &amp;ndash;&amp;gt; IGW 7 IGW &amp;ndash;&amp;gt; Internet host 8-13 Reverse flow Testing Procedure SSH to any of the hosts in Database or SharedServices Spoke (either NLB + :8022, :8033, :8044) Ping 8.</description>
+    </item>
+    
+    <item>
+      <title>Distributed Subnet to Subnet</title>
+      <link>/02handsonflows/4_distsub2sub.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/02handsonflows/4_distsub2sub.html</guid>
+      <description>Distributed Subnet to Subnet Flow Description &amp;amp; Diagram # Hop description 1 SS01 to SS02 MSR &amp;ndash;&amp;gt; GWLBe02 2 GWLBe magic: GWLB (GENEVE) &amp;ndash;&amp;gt; CGNS and return back to GWLBe 3 GWLBe SpokeCIDR &amp;ndash;&amp;gt; Local Testing Procedure Ssh to one of the Shared Services hosts (either NLB :8033 or :8044)
+Ping the other SharedServices host Realize the pings don’t work b/c MSR routes are not in place on the Shared Services Web Tier RTs</description>
+    </item>
+    
+    <item>
+      <title>Distributed Ingress &amp; Egress</title>
+      <link>/02handsonflows/5_distinout.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/02handsonflows/5_distinout.html</guid>
+      <description>Distributed Ingress &amp;amp; Egress Flow Description &amp;amp; Diagram # Hop description Outbound 1 Web-Tier to Internet 0/ &amp;ndash;&amp;gt; GWLBe 2 GWLBe magic: GWLB (GENEVE) &amp;ndash;&amp;gt; CGNS and return back to GWLBe 3 GWLBe 0/ &amp;ndash;&amp;gt; IGW # Hop description Inbound 3 IGW Ingress RT Web-Tier &amp;ndash;&amp;gt; GWLB 2 GWLBe magic: GWLB (GENEVE) &amp;ndash;&amp;gt; CGNS and return back to GWLBe 1 GWLBe Spoke 3 VPC&amp;ndash;&amp;gt; Local Testing Procedure SSH to 11WebTierEC2PrivIp with ee-default-keypair Once logged in: ping 8.</description>
+    </item>
+    
+    <item>
+      <title>Centralized Ingress (Inspection Second)</title>
+      <link>/02handsonflows/6_centininspectsecond.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/02handsonflows/6_centininspectsecond.html</guid>
+      <description>Centralized Ingress (Inspection Second) Flow Description &amp;amp; Diagram # Hop description 1 Internet to NLB:8022 2 NLB (NAT) SpokeCIDR &amp;ndash;&amp;gt; GWLBe 3 GWLBe magic: GWLB (GENEVE) &amp;ndash;&amp;gt; CGNS and return back to GWLBe 4 GWLbe Spoke CIDR &amp;ndash;&amp;gt; TGW &amp;ndash;&amp;gt; Propagated Spokes 5-8 Reverse Flow Testing Procedure SSH to the NLBInspectionSecond:8022 with ee-default-keypair Search for the NLB IP (10.0.13.0/24) and internal IP of the EC2 Host in databse VPC (10.100.0.x) Port 22 is the traffic you just generated Port 111 is health checks </description>
+    </item>
+    
+    <item>
+      <title>Centralized Ingress (Inspection First)</title>
+      <link>/02handsonflows/7_centininspectfirst.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/02handsonflows/7_centininspectfirst.html</guid>
+      <description>Centralized Ingress (Inspection First) Flow Description &amp;amp; Diagram # Hop description 1 Internet to NLB:8022 2 Ingress RT NLB &amp;ndash;&amp;gt; GWLBe 3 GWLBe magic: GWLB (GENEVE) &amp;ndash;&amp;gt; CGNS and return back to GWLBe 4 GWLBe Sec VPC &amp;ndash;&amp;gt; Local (NLB) 5 NLB (NAT) Spoke CIDR &amp;ndash;&amp;gt; TGW &amp;ndash;&amp;gt; Propagated Spokes 6-10 Reverse Flow Testing Procedure SSH to the NLBInspectionFirst:8033 with ee-default-keypair Search for your Public IP address or the internal IP of the destination EC2 Host </description>
+    </item>
+    
+  </channel>
+</rss>

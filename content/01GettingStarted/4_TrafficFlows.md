@@ -1,10 +1,10 @@
 ---
-title: "Check Point CGNS"
+title: "Traffic Flows"
 chapter: true
-weight: 1
+weight: 4
 ---
 
-# Check Point CGNS Workshop
+# GWLB Traffic Flows
 
 ### Welcome
 

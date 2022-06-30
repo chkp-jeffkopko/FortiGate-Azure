@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.101.0" />
+    <meta name="description" content="Check Point CGNS Workshop focused on AWS GWLB Architectures and traffic flows">
+<meta name="author" content="Jeff Kopko">
+
+    <link rel="icon" href="https://awsmedia.s3.amazonaws.com/favicon.ico" type="image/x-icon" />
+
+    <title>Workshop Logistics :: Check Point CloudGuard Network Security Workshop - AWS GWLB</title>
+
+    
+    <link href="/css/nucleus.css?1656620320" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1656620320" rel="stylesheet">
+    <link href="/css/hybrid.css?1656620320" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1656620320" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1656620320" rel="stylesheet">
+    <link href="/css/auto-complete.css?1656620320" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1656620320" rel="stylesheet">
+    <link href="/css/theme.css?1656620320" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1656620320" rel="stylesheet">
+    
+    <link href="/css/theme-mine.css?1656620320" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1656620320"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/01gettingstarted/2_wsarch.html">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a href="/" title="Check Point GWLB Workshop"><img style="vertical-align:middle" src="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/Logo_Lockup_Color_Small.svg" height="70px">
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1656620320"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1656620320"></script>
+<script type="text/javascript">
+    
+        var baseurl = "\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1656620320"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <a class="padding" href='/'><i class='fas fa-home'></i> Home</a>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/01gettingstarted.html" title="Getting Started" class="dd-item
+        parent
+        
+        
+        ">
+      <a href="/01gettingstarted.html">
+          Getting Started
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/01gettingstarted/2_wsarch.html" title="Workshop Logistics" class="dd-item active">
+        <a href="/01gettingstarted/2_wsarch.html">
+        Workshop Logistics
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/01gettingstarted/3_gwlbeoptions.html" title="GWLBe Options" class="dd-item ">
+        <a href="/01gettingstarted/3_gwlbeoptions.html">
+        GWLBe Options
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/01gettingstarted/4_trafficflows.html" title="Traffic Flows" class="dd-item ">
+        <a href="/01gettingstarted/4_trafficflows.html">
+        Traffic Flows
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/01gettingstarted/5_securitypolicysetup.html" title="Initial Setup" class="dd-item ">
+        <a href="/01gettingstarted/5_securitypolicysetup.html">
+        Initial Setup
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/01gettingstarted/6_testhostlogin.html" title="Test Host Login" class="dd-item ">
+        <a href="/01gettingstarted/6_testhostlogin.html">
+        Test Host Login
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/01gettingstarted/7_tipstricks.html" title="Tips and tricks" class="dd-item ">
+        <a href="/01gettingstarted/7_tipstricks.html">
+        Tips and tricks
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/02handsonflows.html" title="Traffic Flow Demonstrations" class="dd-item
+        
+        
+        
+        ">
+      <a href="/02handsonflows.html">
+          Traffic Flow Demonstrations
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/02handsonflows/2_centew.html" title="Centralized E/W across Spokes" class="dd-item ">
+        <a href="/02handsonflows/2_centew.html">
+        Centralized E/W across Spokes
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/02handsonflows/3_centegress.html" title="Centralized Egress" class="dd-item ">
+        <a href="/02handsonflows/3_centegress.html">
+        Centralized Egress
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/02handsonflows/4_distsub2sub.html" title="Distributed Subnet to Subnet" class="dd-item ">
+        <a href="/02handsonflows/4_distsub2sub.html">
+        Distributed Subnet to Subnet
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/02handsonflows/5_distinout.html" title="Distributed Ingress &amp; Egress" class="dd-item ">
+        <a href="/02handsonflows/5_distinout.html">
+        Distributed Ingress &amp; Egress
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/02handsonflows/6_centininspectsecond.html" title="Centralized Ingress (Inspection Second)" class="dd-item ">
+        <a href="/02handsonflows/6_centininspectsecond.html">
+        Centralized Ingress (Inspection Second)
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/02handsonflows/7_centininspectfirst.html" title="Centralized Ingress (Inspection First)" class="dd-item ">
+        <a href="/02handsonflows/7_centininspectfirst.html">
+        Centralized Ingress (Inspection First)
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li>
+                  <a class="padding" href="https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&amp;solutionid=sk174447"><i class='fas fa-graduation-cap'></i> Check Point GWLB SK </a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://github.com/CheckPointSW-Community/CloudGuard-NS-AWS-GWLB"><i class='fas fa-tools'></i> Check Point GitHub Repo for GWLB Architectures </a>
+              </li>
+          
+              <li>
+                  <a class="padding" href="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/CHKP-CGNS-GWLB-WorkshopArchitecture.drawio.pdf"><i class='fas fa-tools'></i> Architecture Diagram </a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <left>
+
+    <a href="https://aws.amazon.com/privacy/?nc1=f_pr">Privacy</a> | <a
+        href="https://aws.amazon.com/terms/?nc1=f_pr">Site Terms</a> | <a
+        href="https://modernization-workshop-bucket.s3-us-west-2.amazonaws.com/license/cc-license.html">CC BY-SA 4.0</a>
+
+</left>
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Check Point CGNS</a> > <a href='/01gettingstarted.html'>Getting Started</a> > Workshop Logistics
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+          <div id="chapter">
+        
+        <div id="body-inner">
+          
+
+        
+
+
+<h1 id="workshop-logistics">Workshop Logistics</h1>
+<h3 id="summary-steps">Summary Steps</h3>
+<ol>
+<li>Browse to the AWS Event Engine Console and login with an email One-time-password
+<ul>
+<li>Gmail is very fast…some corporate emails take a long time to get delivered</li>
+</ul>
+</li>
+<li>Each participant will get their own AWS account with CGNS GWLB architecture deployed in it</li>
+<li>Login to the Check Point Smart Management console and set an initial policy to enable traffic flows, and then we’ll walk through each of the flows in this workshop together</li>
+</ol>
+<h3 id="gwlb-reference-architecture-diagram">GWLB Reference Architecture Diagram</h3>
+<p><img src="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/CHKP-CGNS-GWLB-WorkshopArchitecture-Workshop+Final.drawio.png" alt="ws-arch"></p>
+<h3 id="notes">Notes:</h3>
+<ul>
+<li>There are several different ways to organize your AWS Architecture to take advantage of CloudGuard Traffic inspection with AWS GWLB.  It is important to remember that as long as the traffic has a symmetrical routing path for forward and reverse flow, the architecture will work.</li>
+<li>This diagram may look complicated at first glance because it covers <strong>ALL Traffic Flow Options</strong>.  For each scenario, we&rsquo;ll highlight the components involved in that flow.  Depending on application requirements you may only require a subnet of the flows and accordingly a subnet of this Reference Architecture</li>
+</ul>
+<h3 id="learning-objectives">Learning Objectives</h3>
+<ul>
+<li>Learn the difference between Centralized and Decentralized GWLB &amp; GWLBe Architectures</li>
+<li>Understand how each listed flow works</li>
+<li>Understand the differences and advantages/disadvntages of centralized ingress architecture options</li>
+</ul>
+
+<div class="notices warning" ><!-- raw HTML omitted -->
+</div>
+
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+            </div> 
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/01gettingstarted.html" title="Getting Started"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/01gettingstarted/3_gwlbeoptions.html" title="GWLBe Options" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1656620320"></script>
+    <script src="/js/perfect-scrollbar.min.js?1656620320"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1656620320"></script>
+    <script src="/js/jquery.sticky.js?1656620320"></script>
+    <script src="/js/featherlight.min.js?1656620320"></script>
+    <script src="/js/highlight.pack.js?1656620320"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1656620320"></script>
+    <script src="/js/learn.js?1656620320"></script>
+    <script src="/js/hugo-learn.js?1656620320"></script>
+    
+        
+            <script src="/mermaid/mermaid.js?1656620320"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
+

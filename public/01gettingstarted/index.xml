@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Getting Started on Check Point CloudGuard Network Security Workshop - AWS GWLB</title>
+    <link>/01gettingstarted.html</link>
+    <description>Recent content in Getting Started on Check Point CloudGuard Network Security Workshop - AWS GWLB</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="/01gettingstarted/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Workshop Logistics</title>
+      <link>/01gettingstarted/2_wsarch.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/01gettingstarted/2_wsarch.html</guid>
+      <description>Workshop Logistics Summary Steps Browse to the AWS Event Engine Console and login with an email One-time-password Gmail is very fast…some corporate emails take a long time to get delivered Each participant will get their own AWS account with CGNS GWLB architecture deployed in it Login to the Check Point Smart Management console and set an initial policy to enable traffic flows, and then we’ll walk through each of the flows in this workshop together GWLB Reference Architecture Diagram Notes: There are several different ways to organize your AWS Architecture to take advantage of CloudGuard Traffic inspection with AWS GWLB.</description>
+    </item>
+    
+    <item>
+      <title>GWLBe Options</title>
+      <link>/01gettingstarted/3_gwlbeoptions.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/01gettingstarted/3_gwlbeoptions.html</guid>
+      <description>GWLBe Options Distributed Architectures Distributed GWLB Architectures feature an IGW and GWLBe in each VPC. Accordingly, the ingres &amp;amp; egress Internet traffic from that VPC use the local IGW.
+Centralized Architectures Centralized GWLB Architectures connect VPCs together with TGW and use a Centralized Ingress and Egress from either
+Combined Security VPC (as we see in this workshop) Dedicated Internet VPC attached to TGW (not covered in this workshop) </description>
+    </item>
+    
+    <item>
+      <title>Traffic Flows</title>
+      <link>/01gettingstarted/4_trafficflows.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/01gettingstarted/4_trafficflows.html</guid>
+      <description>GWLB Traffic Flows Welcome In this workshop you will learn how to deploy Check Point CGNS with AWS Gateway load balancer as well as architecture options to support 3 different traffic flows: outbound, east-west, and inbound.
+Learning Objectives Deploy Cloud9 as an IDE for completing workshop exercises. How DevOps patterns help to release features and functionality faster. Best practices for implementing 2 pizza team pipelines. </description>
+    </item>
+    
+    <item>
+      <title>Initial Setup</title>
+      <link>/01gettingstarted/5_securitypolicysetup.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/01gettingstarted/5_securitypolicysetup.html</guid>
+      <description>Initial Setup (Credentials and Check Point Security Policy Setup) CloudFormation and Credentials To get started with this workshop, you&amp;rsquo;ll first need to gather some information from the CloudFormation stack that was used to build the Workshop Architecture.
+Login to the AWS Console and navigate to the CloudFormation Console
+Within the Stacks listing, deselect View Nested and choose the stack you created or the stack beginning with mod-module-1-######
+Navigate to Stack Outputs and record all the credentials, keys, and values.</description>
+    </item>
+    
+    <item>
+      <title>Test Host Login</title>
+      <link>/01gettingstarted/6_testhostlogin.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/01gettingstarted/6_testhostlogin.html</guid>
+      <description>Testing procedure Login to test instances The test instances are secured by inbound GWLB flows. To access the instance, you will need to use the Load Balancer DNS names and EC2 Private keys provided in Cloudformation Output
+Use the DNS name above to login via SSH(using Putty or Terminal) with the Private key provided to the following EC2 instances…be sure to note the special port being used for the DB and Shared Services instances</description>
+    </item>
+    
+    <item>
+      <title>Tips and tricks</title>
+      <link>/01gettingstarted/7_tipstricks.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/01gettingstarted/7_tipstricks.html</guid>
+      <description>Tips and Tricks Helpful Items AWS Blogs for GWLB Check Point SK for GWLB Architectures Repetitive testing tool for AL2 CLI: Apache Benchmark yum install httpd-toolsfor i in {1..100}; do ab -n 1000 -c 100 http://www.google.com; done Gateway Load Balancer Limitations &amp;amp; Considerations Flow Stickiness Currently GWLB flow hashing default 5 Tuple (TCP) and 4 Tuple (UDP) Multi layered protocols may be hashed differently Currently flows are sticky for their lifetime.</description>
+    </item>
+    
+  </channel>
+</rss>

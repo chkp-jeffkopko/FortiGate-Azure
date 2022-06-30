@@ -1,0 +1,127 @@
+[
+{
+	"uri": "/",
+	"title": "Check Point CGNS",
+	"tags": [],
+	"description": "",
+	"content": "Check Point CGNS Workshop Welcome In this workshop you will learn how to deploy Check Point CGNS with AWS Gateway load balancer as well as architecture options to support 3 different traffic flows: outbound, east-west, and inbound.\nLearning Objectives Deploy Cloud9 as an IDE for completing workshop exercises. How DevOps patterns help to release features and functionality faster. Best practices for implementing 2 pizza team pipelines. "
+},
+{
+	"uri": "/01gettingstarted.html",
+	"title": "Getting Started",
+	"tags": [],
+	"description": "",
+	"content": "Check Point CGNS Workshop - Getting started Welcome "
+},
+{
+	"uri": "/02handsonflows.html",
+	"title": "Traffic Flow Demonstrations",
+	"tags": [],
+	"description": "",
+	"content": "Demos for each type of traffic flow Scenarios Centralized E-W across Spokes Centralized Egress Distributed Subnet-Subnet Distributed Ingress \u0026amp; Egress Review AWS Blog in Ingress flows with GWLB Centralized Ingress (Inspection second) Centralized Ingress (Inspection first) "
+},
+{
+	"uri": "/02handsonflows/2_centew.html",
+	"title": "Centralized E/W across Spokes",
+	"tags": [],
+	"description": "",
+	"content": "Centralized E/W across Spokes Flow Description \u0026amp; Diagram # Hop description 1 DB host to SS host, 0/ \u0026ndash;\u0026gt; TGW 2 TGW Attachment RT 0/ \u0026ndash;\u0026gt; Sec VPC 3 Sec VPC TGW Attach RT 0/ \u0026ndash;\u0026gt; GWLBe 4 GWLBe magic: GWLB (GENEVE) \u0026ndash;\u0026gt; CGNS and return back to GWLBe 5 GWLBe RT Spoke \u0026ndash;\u0026gt; TGW 6 TGW Propagated RT \u0026ndash;\u0026gt; SS Spoke/Host Testing Procedure Ssh to any of the EC2 hosts in Database or Shared Services VPC Ping another of the EC2 hosts with its private IP Search for the internal IP’s of the EC2 Host you’re sending the ping from and to "
+},
+{
+	"uri": "/intro.html",
+	"title": "Check Point CGNS Intro",
+	"tags": [],
+	"description": "",
+	"content": "Check Point CGNS Workshop - Intro Welcome In this workshop you will learn how to deploy Check Point CGNS with AWS Gateway load balancer as well as architecture options to support 3 different traffic flows: outbound, east-west, and inbound.\n"
+},
+{
+	"uri": "/01gettingstarted/2_wsarch.html",
+	"title": "Workshop Logistics",
+	"tags": [],
+	"description": "",
+	"content": "Workshop Logistics Summary Steps Browse to the AWS Event Engine Console and login with an email One-time-password Gmail is very fast…some corporate emails take a long time to get delivered Each participant will get their own AWS account with CGNS GWLB architecture deployed in it Login to the Check Point Smart Management console and set an initial policy to enable traffic flows, and then we’ll walk through each of the flows in this workshop together GWLB Reference Architecture Diagram Notes: There are several different ways to organize your AWS Architecture to take advantage of CloudGuard Traffic inspection with AWS GWLB. It is important to remember that as long as the traffic has a symmetrical routing path for forward and reverse flow, the architecture will work. This diagram may look complicated at first glance because it covers ALL Traffic Flow Options. For each scenario, we\u0026rsquo;ll highlight the components involved in that flow. Depending on application requirements you may only require a subnet of the flows and accordingly a subnet of this Reference Architecture Learning Objectives Learn the difference between Centralized and Decentralized GWLB \u0026amp; GWLBe Architectures Understand how each listed flow works Understand the differences and advantages/disadvntages of centralized ingress architecture options "
+},
+{
+	"uri": "/02handsonflows/3_centegress.html",
+	"title": "Centralized Egress",
+	"tags": [],
+	"description": "",
+	"content": "Centralized Egress Flow Description \u0026amp; Diagram # Hop description 1 DB host to SS host, 0\u0026ndash;\u0026gt; TGW 2 TGW Attachment RT 0/ \u0026ndash;\u0026gt; Sec VPC 3 Sec VPC TGW Attach RT 0/ \u0026ndash;\u0026gt; GWLBe 4 GWLBe magic: GWLB (GENEVE) \u0026ndash;\u0026gt; CGNS and return back to GWLBe 5 GWLBe RT Spoke\u0026ndash;\u0026gt; TGW 6 TGW Propagated RT \u0026ndash;\u0026gt; SS Spoke/Host 1 SS Host to Internet 0/\u0026ndash;\u0026gt; TGW 2 TGW Attachment RT 0/ \u0026ndash;\u0026gt; Sec VPC 3 Sec VPC TGW Attach RT 0/ \u0026ndash;\u0026gt; GWLBe 4 GWLBe magic: GWLB (GENEVE) \u0026ndash;\u0026gt; CGNS and return back to GWLBe 5 GWLBe RT 0/ \u0026ndash;\u0026gt; NATGW 6 NATGW (egress NAT) 0/ \u0026ndash;\u0026gt; IGW 7 IGW \u0026ndash;\u0026gt; Internet host 8-13 Reverse flow Testing Procedure SSH to any of the hosts in Database or SharedServices Spoke (either NLB + :8022, :8033, :8044) Ping 8.8.8.8 Curl www.google.com Search for the internal IP of the EC2 Host you’re sending the ping/curl from "
+},
+{
+	"uri": "/01gettingstarted/3_gwlbeoptions.html",
+	"title": "GWLBe Options",
+	"tags": [],
+	"description": "",
+	"content": "GWLBe Options Distributed Architectures Distributed GWLB Architectures feature an IGW and GWLBe in each VPC. Accordingly, the ingres \u0026amp; egress Internet traffic from that VPC use the local IGW.\nCentralized Architectures Centralized GWLB Architectures connect VPCs together with TGW and use a Centralized Ingress and Egress from either\nCombined Security VPC (as we see in this workshop) Dedicated Internet VPC attached to TGW (not covered in this workshop) "
+},
+{
+	"uri": "/02handsonflows/4_distsub2sub.html",
+	"title": "Distributed Subnet to Subnet",
+	"tags": [],
+	"description": "",
+	"content": "Distributed Subnet to Subnet Flow Description \u0026amp; Diagram # Hop description 1 SS01 to SS02 MSR \u0026ndash;\u0026gt; GWLBe02 2 GWLBe magic: GWLB (GENEVE) \u0026ndash;\u0026gt; CGNS and return back to GWLBe 3 GWLBe SpokeCIDR \u0026ndash;\u0026gt; Local Testing Procedure Ssh to one of the Shared Services hosts (either NLB :8033 or :8044)\nPing the other SharedServices host Realize the pings don’t work b/c MSR routes are not in place on the Shared Services Web Tier RTs\n10.100.4.0/22 Local CIDR needs a new Next Hop in RT for Sub01 \u0026amp; Sub02\nSub01 route should oppose the 10.100.5.0/24 VPCE Sub02 route should oppose the Sub01 VPCE Search for the internal IP of the EC2 Hosts in shared services Spoke\n"
+},
+{
+	"uri": "/01gettingstarted/4_trafficflows.html",
+	"title": "Traffic Flows",
+	"tags": [],
+	"description": "",
+	"content": "GWLB Traffic Flows Welcome In this workshop you will learn how to deploy Check Point CGNS with AWS Gateway load balancer as well as architecture options to support 3 different traffic flows: outbound, east-west, and inbound.\nLearning Objectives Deploy Cloud9 as an IDE for completing workshop exercises. How DevOps patterns help to release features and functionality faster. Best practices for implementing 2 pizza team pipelines. "
+},
+{
+	"uri": "/02handsonflows/5_distinout.html",
+	"title": "Distributed Ingress &amp; Egress",
+	"tags": [],
+	"description": "",
+	"content": "Distributed Ingress \u0026amp; Egress Flow Description \u0026amp; Diagram # Hop description Outbound 1 Web-Tier to Internet 0/ \u0026ndash;\u0026gt; GWLBe 2 GWLBe magic: GWLB (GENEVE) \u0026ndash;\u0026gt; CGNS and return back to GWLBe 3 GWLBe 0/ \u0026ndash;\u0026gt; IGW # Hop description Inbound 3 IGW Ingress RT Web-Tier \u0026ndash;\u0026gt; GWLB 2 GWLBe magic: GWLB (GENEVE) \u0026ndash;\u0026gt; CGNS and return back to GWLBe 1 GWLBe Spoke 3 VPC\u0026ndash;\u0026gt; Local Testing Procedure SSH to 11WebTierEC2PrivIp with ee-default-keypair Once logged in: ping 8.8.8.8 curl www.google.com Search for the internal IP of the EC2 Host in Web-Tier Spoke "
+},
+{
+	"uri": "/01gettingstarted/5_securitypolicysetup.html",
+	"title": "Initial Setup",
+	"tags": [],
+	"description": "",
+	"content": "Initial Setup (Credentials and Check Point Security Policy Setup) CloudFormation and Credentials To get started with this workshop, you\u0026rsquo;ll first need to gather some information from the CloudFormation stack that was used to build the Workshop Architecture.\nLogin to the AWS Console and navigate to the CloudFormation Console\nWithin the Stacks listing, deselect View Nested and choose the stack you created or the stack beginning with mod-module-1-######\nNavigate to Stack Outputs and record all the credentials, keys, and values. We will need these later in the workshop\nCheck Point Security Policy Setup Now, we need to login to the Check Point Web SmartConsole to setup an initial security policy for the workshop, which will allow us to test all traffic flows.\nSECURITY DISCLAIMER – this is a sample policy for this WORKSHOP ONLY and it NOT SUITABLE for a production environment!!!! From the CloudFormation Output, locate the Public IP provided for the Check Point Security Management Server\nLogin to the Check Point SmartConsole application via web console SmartClient:\nUsername: admin Password: qwe123! Web SmartConsole at https://publicIP/smartconsole R81.10 SmartConsole Windows application \u0026gt; Use Public IP from above If you need to install SmartConsole on Windows you can download HERE\nOnce logged in, Verify that the CloudGuard Network Security Gateways have been discovered by the Security Management Server\nNow we, can create an initial Check Point Security Policy. Navigate to the Security Policies tab in SmartConsole\nCreate a new rule above the default Cleanup rule\nThe result should look like this…in this example we gave the rule the name Allow Outbound Modify the new rule to allow the network 10.100.0.0/16 outbound access to ANY\nGive your rule a name if preferred(not required)\nAdd a new network object that represents 10.100.0.0/16 to the Source field\nResult should look like this:\nModify the rule so that Destination is ANY Set Action to Accept Set Track to Log Using the same procedure as above, create another rule that allows Inbound traffic to the following networks:\n10.100.0.0/16 10.0.15.0/24 10.0.25.0/24 10.0.36.0/24 Set the Cleanup Rule to Log Install Policy to push the new security policy to the Security Gateways\n"
+},
+{
+	"uri": "/02handsonflows/6_centininspectsecond.html",
+	"title": "Centralized Ingress (Inspection Second)",
+	"tags": [],
+	"description": "",
+	"content": "Centralized Ingress (Inspection Second) Flow Description \u0026amp; Diagram # Hop description 1 Internet to NLB:8022 2 NLB (NAT) SpokeCIDR \u0026ndash;\u0026gt; GWLBe 3 GWLBe magic: GWLB (GENEVE) \u0026ndash;\u0026gt; CGNS and return back to GWLBe 4 GWLbe Spoke CIDR \u0026ndash;\u0026gt; TGW \u0026ndash;\u0026gt; Propagated Spokes 5-8 Reverse Flow Testing Procedure SSH to the NLBInspectionSecond:8022 with ee-default-keypair Search for the NLB IP (10.0.13.0/24) and internal IP of the EC2 Host in databse VPC (10.100.0.x) Port 22 is the traffic you just generated Port 111 is health checks "
+},
+{
+	"uri": "/01gettingstarted/6_testhostlogin.html",
+	"title": "Test Host Login",
+	"tags": [],
+	"description": "",
+	"content": "Testing procedure Login to test instances The test instances are secured by inbound GWLB flows. To access the instance, you will need to use the Load Balancer DNS names and EC2 Private keys provided in Cloudformation Output\nUse the DNS name above to login via SSH(using Putty or Terminal) with the Private key provided to the following EC2 instances…be sure to note the special port being used for the DB and Shared Services instances\nDB instance: dnsname:8022 Shared Services instance #1: dnsname:8033 Shared Services instance #2: dnsname:8044 Web-Tier instance: Public IP as defined by the CFT Test Host \u0026amp; NLB Info VPC EC2 Host AZ SSH Internal Subnet Database database-EC2-*** A NLB:8022 10.100.0.x/24 SharedServices shared-services-EC2-01-*** A NLB:8033 10.100.4.x/24 SharedServices shared-services-EC2-02-*** B NLB:8034 10.100.05x/24 Web Tier Web-tier-ec2-*** A Public IP from CFT 10.100.8.x/24 ddd NLB Listeners \u0026ndash;\u0026gt; TargetGroup AZ Health Check Internal Subnet InspectFirst 8022 \u0026ndash;\u0026gt; database-EC2-*** A,B,C 111 10.0.15.0/24, 10.0.25.0/24, 10.0.35.0/24 - 8033 \u0026ndash;\u0026gt; shared-services-EC2-01-*** - - - - 8044 \u0026ndash;\u0026gt; shared-services-EC2-02-*** - - - InspectSecond 8022 \u0026ndash;\u0026gt; database-EC2-*** A, B, C 111 10.0.13.0/24, 10.0.23.0/24, 10.0.33.0/24 - 8033 \u0026ndash;\u0026gt; shared-services-EC2-01-**** - - - - 8044 \u0026ndash;\u0026gt; shared-services-EC2-02-**** - - - CloudGuard Instances VPC EC2 Host AZ SSH Internal Subnet Security Check-Point-Gateway-1 A - 10.0.10.x/24 Security Check-Point-Gateway-1 B - 10.0.20.x/24 Security Check-Point-Gateway-1 C - 10.0.30.x/24 Security Gwlb-management-server A Public IP from CFT 10.0.10.x/24 Test Internet(outbound) traffic Validate that pings and web requests to the internet are successful from each instance above\nping 8.8.8.8 curl www.google.com "
+},
+{
+	"uri": "/02handsonflows/7_centininspectfirst.html",
+	"title": "Centralized Ingress (Inspection First)",
+	"tags": [],
+	"description": "",
+	"content": "Centralized Ingress (Inspection First) Flow Description \u0026amp; Diagram # Hop description 1 Internet to NLB:8022 2 Ingress RT NLB \u0026ndash;\u0026gt; GWLBe 3 GWLBe magic: GWLB (GENEVE) \u0026ndash;\u0026gt; CGNS and return back to GWLBe 4 GWLBe Sec VPC \u0026ndash;\u0026gt; Local (NLB) 5 NLB (NAT) Spoke CIDR \u0026ndash;\u0026gt; TGW \u0026ndash;\u0026gt; Propagated Spokes 6-10 Reverse Flow Testing Procedure SSH to the NLBInspectionFirst:8033 with ee-default-keypair Search for your Public IP address or the internal IP of the destination EC2 Host "
+},
+{
+	"uri": "/01gettingstarted/7_tipstricks.html",
+	"title": "Tips and tricks",
+	"tags": [],
+	"description": "",
+	"content": "Tips and Tricks Helpful Items AWS Blogs for GWLB Check Point SK for GWLB Architectures Repetitive testing tool for AL2 CLI: Apache Benchmark yum install httpd-tools\rfor i in {1..100}; do ab -n 1000 -c 100 http://www.google.com; done Gateway Load Balancer Limitations \u0026amp; Considerations Flow Stickiness Currently GWLB flow hashing default 5 Tuple (TCP) and 4 Tuple (UDP) Multi layered protocols may be hashed differently Currently flows are sticky for their lifetime. If an appliance crashes, the application must re-establish TCP flow FLOW idle timeouts Currently fixed and unchangable 350s for TCP 120s for UDP No VPN Currently Check Point does not support VPN with GWLB architectures Cost GWLB \u0026amp; GWLBe both have per hour per AZ costs \u0026amp; a Data charge "
+},
+{
+	"uri": "/categories.html",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags.html",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
