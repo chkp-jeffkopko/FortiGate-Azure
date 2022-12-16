@@ -1,10 +1,13 @@
 ---
-title: "Getting Started"
+title: "Ch 1 Getting Started"
 chapter: true
 weight: 1
 ---
 
-# Check Point CGNS Workshop - Getting started
+# Fortinet Workshop - Getting started
 
 ### Welcome
 
+## Chapter 1 - Setting up the environment (40min)
+
+***[Deployment exercise - estimated duration 40min]***

@@ -3,30 +3,30 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="Hugo 0.101.0" />
-    <meta name="description" content="Check Point CGNS Workshop focused on AWS GWLB Architectures and traffic flows">
+    <meta name="generator" content="Hugo 0.108.0">
+    <meta name="description" content="Fortigate Demo Architecture for SDWAN on Azure">
 <meta name="author" content="Jeff Kopko">
 
     <link rel="icon" href="https://awsmedia.s3.amazonaws.com/favicon.ico" type="image/x-icon" />
 
-    <title>Getting Started :: Check Point CloudGuard Network Security Workshop - AWS GWLB</title>
+    <title>Ch 1 Getting Started :: Fortinet FortiGate Technical Recipie- Azure SDWAN</title>
 
     
-    <link href="/css/nucleus.css?1656620320" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1656620320" rel="stylesheet">
-    <link href="/css/hybrid.css?1656620320" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1656620320" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1656620320" rel="stylesheet">
-    <link href="/css/auto-complete.css?1656620320" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1656620320" rel="stylesheet">
-    <link href="/css/theme.css?1656620320" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1656620320" rel="stylesheet">
+    <link href="/css/nucleus.css?1671214041" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1671214041" rel="stylesheet">
+    <link href="/css/hybrid.css?1671214041" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1671214041" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1671214041" rel="stylesheet">
+    <link href="/css/auto-complete.css?1671214041" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1671214041" rel="stylesheet">
+    <link href="/css/theme.css?1671214041" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1671214041" rel="stylesheet">
     
-    <link href="/css/theme-mine.css?1656620320" rel="stylesheet">
+    <link href="/css/theme-mine.css?1671214041" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1656620320"></script>
+    <script src="/js/jquery-3.3.1.min.js?1671214041"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -43,7 +43,7 @@
 
   <div id="header-wrapper">
     <div id="header">
-      <a href="/" title="Check Point GWLB Workshop"><img style="vertical-align:middle" src="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/Logo_Lockup_Color_Small.svg" height="70px">
+      <a href="/" title="Fortinet FortiGate on Azure"><img style="vertical-align:middle" src="https://docs.fortinet.com/img/fortinet-black.svg" height="70px">
 
     </div>
     
@@ -53,14 +53,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1656620320"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1656620320"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1671214041"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1671214041"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1656620320"></script>
+<script type="text/javascript" src="/js/search.js?1671214041"></script>
 
     
   </div>
@@ -87,13 +87,13 @@
  
   
     
-    <li data-nav-id="/01gettingstarted.html" title="Getting Started" class="dd-item
+    <li data-nav-id="/01gettingstarted.html" title="Ch 1 Getting Started" class="dd-item
         
         active
         
         ">
       <a href="/01gettingstarted.html">
-          Getting Started
+          Ch 1 Getting Started
           
             <i class="fas fa-check read-icon"></i>
           
@@ -116,9 +116,9 @@
  
   
     
-      <li data-nav-id="/01gettingstarted/2_wsarch.html" title="Workshop Logistics" class="dd-item ">
-        <a href="/01gettingstarted/2_wsarch.html">
-        Workshop Logistics
+      <li data-nav-id="/01gettingstarted/2_task1.html" title="Task 1 Setup Azure CloudShell" class="dd-item ">
+        <a href="/01gettingstarted/2_task1.html">
+        Task 1 Setup Azure CloudShell
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -137,9 +137,9 @@
  
   
     
-      <li data-nav-id="/01gettingstarted/3_gwlbeoptions.html" title="GWLBe Options" class="dd-item ">
-        <a href="/01gettingstarted/3_gwlbeoptions.html">
-        GWLBe Options
+      <li data-nav-id="/01gettingstarted/3_task2.html" title="Task 2 - Run Terraform" class="dd-item ">
+        <a href="/01gettingstarted/3_task2.html">
+        Task 2 - Run Terraform
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -158,9 +158,9 @@
  
   
     
-      <li data-nav-id="/01gettingstarted/4_trafficflows.html" title="Traffic Flows" class="dd-item ">
-        <a href="/01gettingstarted/4_trafficflows.html">
-        Traffic Flows
+      <li data-nav-id="/01gettingstarted/4_task3.html" title="task 3 - Terraform Verifications" class="dd-item ">
+        <a href="/01gettingstarted/4_task3.html">
+        task 3 - Terraform Verifications
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -179,9 +179,9 @@
  
   
     
-      <li data-nav-id="/01gettingstarted/5_securitypolicysetup.html" title="Initial Setup" class="dd-item ">
-        <a href="/01gettingstarted/5_securitypolicysetup.html">
-        Initial Setup
+      <li data-nav-id="/01gettingstarted/5_chapter1quiz.html" title="Chapter 1 Quiz" class="dd-item ">
+        <a href="/01gettingstarted/5_chapter1quiz.html">
+        Chapter 1 Quiz
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -200,30 +200,9 @@
  
   
     
-      <li data-nav-id="/01gettingstarted/6_testhostlogin.html" title="Test Host Login" class="dd-item ">
-        <a href="/01gettingstarted/6_testhostlogin.html">
-        Test Host Login
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/01gettingstarted/7_tipstricks.html" title="Tips and tricks" class="dd-item ">
-        <a href="/01gettingstarted/7_tipstricks.html">
-        Tips and tricks
+      <li data-nav-id="/01gettingstarted/6_chapter1discussion.html" title="Chapter 1 Discussion" class="dd-item ">
+        <a href="/01gettingstarted/6_chapter1discussion.html">
+        Chapter 1 Discussion
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -249,13 +228,13 @@
  
   
     
-    <li data-nav-id="/02handsonflows.html" title="Traffic Flow Demonstrations" class="dd-item
+    <li data-nav-id="/02demo1.html" title="Ch 2 - Hub and Branch VPN Connectivity" class="dd-item
         
         
         
         ">
-      <a href="/02handsonflows.html">
-          Traffic Flow Demonstrations
+      <a href="/02demo1.html">
+          Ch 2 - Hub and Branch VPN Connectivity
           
             <i class="fas fa-check read-icon"></i>
           
@@ -278,9 +257,9 @@
  
   
     
-      <li data-nav-id="/02handsonflows/2_centew.html" title="Centralized E/W across Spokes" class="dd-item ">
-        <a href="/02handsonflows/2_centew.html">
-        Centralized E/W across Spokes
+      <li data-nav-id="/02demo1/2_task1.html" title="Task 1 - FortiGate on Hub LB" class="dd-item ">
+        <a href="/02demo1/2_task1.html">
+        Task 1 - FortiGate on Hub LB
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -299,9 +278,9 @@
  
   
     
-      <li data-nav-id="/02handsonflows/3_centegress.html" title="Centralized Egress" class="dd-item ">
-        <a href="/02handsonflows/3_centegress.html">
-        Centralized Egress
+      <li data-nav-id="/02demo1/3_task2.html" title="Task 2 - LB Rules for VPN Traffic" class="dd-item ">
+        <a href="/02demo1/3_task2.html">
+        Task 2 - LB Rules for VPN Traffic
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -320,9 +299,9 @@
  
   
     
-      <li data-nav-id="/02handsonflows/4_distsub2sub.html" title="Distributed Subnet to Subnet" class="dd-item ">
-        <a href="/02handsonflows/4_distsub2sub.html">
-        Distributed Subnet to Subnet
+      <li data-nav-id="/02demo1/4_task3.html" title="Task 3 - Hub and Spoke VPN Verification" class="dd-item ">
+        <a href="/02demo1/4_task3.html">
+        Task 3 - Hub and Spoke VPN Verification
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -341,9 +320,9 @@
  
   
     
-      <li data-nav-id="/02handsonflows/5_distinout.html" title="Distributed Ingress &amp; Egress" class="dd-item ">
-        <a href="/02handsonflows/5_distinout.html">
-        Distributed Ingress &amp; Egress
+      <li data-nav-id="/02demo1/5_chapter2quiz.html" title="Chapter 2 Quiz" class="dd-item ">
+        <a href="/02demo1/5_chapter2quiz.html">
+        Chapter 2 Quiz
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -362,30 +341,9 @@
  
   
     
-      <li data-nav-id="/02handsonflows/6_centininspectsecond.html" title="Centralized Ingress (Inspection Second)" class="dd-item ">
-        <a href="/02handsonflows/6_centininspectsecond.html">
-        Centralized Ingress (Inspection Second)
-        <i class="fas fa-check read-icon"></i>
-        </a>
-    </li>
-     
-  
- 
-
-            
-          
-            
-            
-
-
-
-
- 
-  
-    
-      <li data-nav-id="/02handsonflows/7_centininspectfirst.html" title="Centralized Ingress (Inspection First)" class="dd-item ">
-        <a href="/02handsonflows/7_centininspectfirst.html">
-        Centralized Ingress (Inspection First)
+      <li data-nav-id="/02demo1/6_ch2discussion.html" title="Chapter 2 Discussion" class="dd-item ">
+        <a href="/02demo1/6_ch2discussion.html">
+        Chapter 2 Discussion
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -413,15 +371,15 @@
         <ul>
           
               <li>
-                  <a class="padding" href="https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&amp;solutionid=sk174447"><i class='fas fa-graduation-cap'></i> Check Point GWLB SK </a>
+                  <a class="padding" href="https://docs.fortinet.com/document/fortigate/7.2.2/administration-guide/763117/terraform-fortios-as-a-provider"><i class='fas fa-graduation-cap'></i> Forti OS 7.2 Admin Guide </a>
               </li>
           
               <li>
-                  <a class="padding" href="https://github.com/CheckPointSW-Community/CloudGuard-NS-AWS-GWLB"><i class='fas fa-tools'></i> Check Point GitHub Repo for GWLB Architectures </a>
+                  <a class="padding" href="https://fndn.fortinet.net/index.php?/cloud/terraform/"><i class='fas fa-tools'></i> Terraform Providers </a>
               </li>
           
               <li>
-                  <a class="padding" href="https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/CHKP-CGNS-GWLB-WorkshopArchitecture.drawio.pdf"><i class='fas fa-tools'></i> Architecture Diagram </a>
+                  <a class="padding" href="https://www.fortinet.com/products/public-cloud-security/azure"><i class='fas fa-tools'></i> FortiGate on Azure </a>
               </li>
           
         </ul>
@@ -480,7 +438,7 @@
             
           
           
-            <a href='/'>Check Point CGNS</a> > Getting Started
+            <a href='/'>Fortinet FortiGate SDWAN</a> > Ch 1 Getting Started
           
         
           
@@ -505,8 +463,10 @@
 
 
 
-	<h1 id="check-point-cgns-workshop---getting-started">Check Point CGNS Workshop - Getting started</h1>
+	<h1 id="fortinet-workshop---getting-started">Fortinet Workshop - Getting started</h1>
 <h3 id="welcome">Welcome</h3>
+<h2 id="chapter-1---setting-up-the-environment-40min">Chapter 1 - Setting up the environment (40min)</h2>
+<p><em><strong>[Deployment exercise - estimated duration 40min]</strong></em></p>
 
 
 
@@ -641,22 +601,6 @@
             
         
                     
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
             
         
                     
@@ -672,22 +616,6 @@
                     
                     
 
-                    
-                        
-            
-            
-                
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
                     
                         
             
@@ -781,10 +709,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/" title="Check Point CGNS"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/" title="Fortinet FortiGate SDWAN"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/01gettingstarted/2_wsarch.html" title="Workshop Logistics" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/01gettingstarted/2_task1.html" title="Task 1 Setup Azure CloudShell" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -794,19 +722,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1656620320"></script>
-    <script src="/js/perfect-scrollbar.min.js?1656620320"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1656620320"></script>
-    <script src="/js/jquery.sticky.js?1656620320"></script>
-    <script src="/js/featherlight.min.js?1656620320"></script>
-    <script src="/js/highlight.pack.js?1656620320"></script>
+    <script src="/js/clipboard.min.js?1671214041"></script>
+    <script src="/js/perfect-scrollbar.min.js?1671214041"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1671214041"></script>
+    <script src="/js/jquery.sticky.js?1671214041"></script>
+    <script src="/js/featherlight.min.js?1671214041"></script>
+    <script src="/js/highlight.pack.js?1671214041"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1656620320"></script>
-    <script src="/js/learn.js?1656620320"></script>
-    <script src="/js/hugo-learn.js?1656620320"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1671214041"></script>
+    <script src="/js/learn.js?1671214041"></script>
+    <script src="/js/hugo-learn.js?1671214041"></script>
     
         
-            <script src="/mermaid/mermaid.js?1656620320"></script>
+            <script src="/mermaid/mermaid.js?1671214041"></script>
         
         <script>
             mermaid.initialize({ startOnLoad: true });

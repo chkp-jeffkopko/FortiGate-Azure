@@ -2,7 +2,7 @@ baseURL = "/"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
-title = "Check Point CloudGuard Network Security Workshop - AWS GWLB"
+title = "Fortinet FortiGate Technical Recipie- Azure SDWAN"
 theme = "hugo-theme-learn"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= "false"
@@ -17,7 +17,7 @@ enableEmoji = true
   # Author of the site, will be used in meta information
   author = "Jeff Kopko"
   # Description of the site, will be used in meta information
-  description = "Check Point CGNS Workshop focused on AWS GWLB Architectures and traffic flows"
+  description = "Fortigate Demo Architecture for SDWAN on Azure"
   # Shows a checkmark for visited pages on the menu
   showVisitedLinks = true
   # Disable search function. It will hide search bar
@@ -45,18 +45,18 @@ enableEmoji = true
 home = [ "HTML", "RSS", "JSON"]
 
 [[menu.shortcuts]] 
-name = "<i class='fas fa-graduation-cap'></i> Check Point GWLB SK "
-url = "https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&solutionid=sk174447"
+name = "<i class='fas fa-graduation-cap'></i> Forti OS 7.2 Admin Guide "
+url = "https://docs.fortinet.com/document/fortigate/7.2.2/administration-guide/763117/terraform-fortios-as-a-provider"
 weight = 10
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-tools'></i> Check Point GitHub Repo for GWLB Architectures "
-url = "https://github.com/CheckPointSW-Community/CloudGuard-NS-AWS-GWLB"
+name = "<i class='fas fa-tools'></i> Terraform Providers "
+url = "https://fndn.fortinet.net/index.php?/cloud/terraform/"
 weight = 11
 
 [[menu.shortcuts]]
-name = "<i class='fas fa-tools'></i> Architecture Diagram "
-url = "https://chkp-gwlb-ws01.s3.us-west-2.amazonaws.com/CHKP-CGNS-GWLB-WorkshopArchitecture.drawio.pdf"
+name = "<i class='fas fa-tools'></i> FortiGate on Azure "
+url = "https://www.fortinet.com/products/public-cloud-security/azure"
 weight = 21
 
 
@@ -64,3 +64,4 @@ weight = 21
   defaultMarkdownHandler = "goldmark"
   [markup.goldmark]
     hrefTargetBlank = true
+
